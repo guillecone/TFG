@@ -1,0 +1,384 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Buscador */
+.search-container {
+    margin: 20px;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Contenedores generales */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sección de servicios */
+.services {
+    margin-top: 40px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    width: 200px;
+    padding: 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #007bff;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item p {
+    position: relative;
+    z-index: 1;
+}
+
+.service-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path_to_image.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.service-item.ortodoncia::before {
+    background-image: url('path_to_ortodoncia_image.jpg');
+}
+
+.service-item.implantes::before {
+    background-image: url('path_to_implantes_image.jpg');
+}
+
+.service-item.blanqueamiento::before {
+    background-image: url('path_to_blanqueamiento_image.jpg');
+}
+
+.service-item.odontologia::before {
+    background-image: url('path_to_odontologia_image.jpg');
+}
+
+.gallery {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 15px; /* Espacio entre imágenes */
+}
+
+.gallery-item img {
+    width: 100%; /* Ajusta esto según el tamaño deseado */
+    max-width: 250px; /* Limita el ancho de cada imagen */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Controles de navegación */
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-button-prev {
+    left: 10px;
+}
+
+.gallery-button-next {
+    right: 10px;
+}
+
+
+/* Controles de navegación */
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-button-prev {
+    left: 10px;
+}
+
+.gallery-button-next {
+    right: 10px;
+}
+
+
+/* Controles de navegación */
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-button-prev {
+    left: 10px;
+}
+
+.gallery-button-next {
+    right: 10px;
+}
+
+
+/* Controles de navegación */
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-button-prev {
+    left: 10px;
+}
+
+.gallery-button-next {
+    right: 10px;
+}
+
+/* Efecto de transición en las imágenes */
+.gallery-container:hover .gallery-images img {
+    transform: scale(1.02);
+}
+
+
+/* Testimonios */
+.testimonials {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 140px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card p {
+    font-size: 18px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-card cite {
+    display: block;
+    font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Mapa */
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+/* Contacto */
+.contact {
+    margin-top: 50px;
+    background-color: #f7f7f7;
+    padding: 40px 0;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 12px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.contact button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

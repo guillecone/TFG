@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ConeDental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>ConeDental</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Citas</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Doctores</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Configuración</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <header class="header">
+            <h1>Dashboard ConeDental</h1>
+        </header>
+
+        <!-- Tarjetas principales -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Clínicas</h5>
+                        <p id="total-clinicas">0</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Pacientes</h5>
+                        <p id="total-pacientes">0</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Doctores</h5>
+                        <p id="total-doctores">0</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Citas</h5>
+                        <p id="total-citas">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráficos -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Citas por Doctores</h5>
+                        <canvas id="chart-citas"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Pacientes por Tratamientos</h5>
+                        <canvas id="chart-tratamientos"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de Doctores y Pacientes -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card table-card">
+                        <h5>Rendimiento de Doctores</h5>
+                        <ul id="lista-doctores"></ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card table-card">
+                        <h5>Pacientes en Tratamiento</h5>
+                        <ul id="lista-pacientes-tratamientos"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

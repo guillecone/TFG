@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ConeDental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar de Navegación -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>ConeDental</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Citas</a></li>
+            <li><a href="#">Clínicas</a></li>
+            <li><a href="#">Doctores</a></li>
+            <li><a href="#">Empleados</a></li>
+            <li><a href="#">Material Dental</a></li>
+            <li><a href="#">Medicamentos</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Tratamientos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="content">
+        <header class="header">e
+            <h1>Dashboard ConeDental</h1>
+        </header>
+
+        <!-- Sección de Tarjetas de Resumen -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Citas</h5>
+                        <p id="total-citas">0</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Clínicas</h5>
+                        <p id="total-clinicas">0</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Doctores</h5>
+                        <p id="total-doctores">0</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Empleados</h5>
+                        <p id="total-empleados">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Material Dental</h5>
+                        <p id="total-material">0</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Medicamentos</h5>
+                        <p id="total-medicamentos">0</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Pacientes</h5>
+                        <p id="total-pacientes">0</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card info-card">
+                        <h5>Proveedores</h5>
+                        <p id="total-proveedores">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <!-- Gráficos -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Citas por Doctores</h5>
+                        <canvas id="chart-citas"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Pacientes por Tratamientos</h5>
+                        <canvas id="chart-tratamientos"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row">
+                <!--  Gráfico: Medicamentos por Pacientes -->
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Medicamentos por Paciente</h5>
+                        <canvas id="chart-pacientes-medicamentos"></canvas>
+                    </div>
+                </div>
+        
+                <!-- Gráfico: Medicamentos por Tratamiento -->
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Medicamentos por Tratamiento</h5>
+                        <canvas id="chart-tratamientos-medicamentos"></canvas>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tablas Interactivas -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card table-card">
+                        <h5>Lista de Medicamentos por Pacientes</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Paciente</th>
+                                    <th>Medicamento</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-pacientes-medicamentos"></tbody>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="col-md-6">
+                    <div class="card table-card">
+                        <h5>Lista de Medicamentos por Tratamientos</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Tratamiento</th>
+                                    <th>Medicamento</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-tratamientos-medicamentos"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+    <script src="script.js"></script>
+</body>
+</html>

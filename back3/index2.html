@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - ConeDental</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>ConeDental - Panel de Control</h1>
+        </header>
+        
+        <section class="dashboard">
+            <div class="card" id="clinicas">
+                <h2>Clínicas Disponibles</h2>
+                <ul id="lista-clinicas"></ul>
+            </div>
+            
+            <div class="card" id="citas">
+                <h2>Citas por Doctores</h2>
+                <ul id="lista-citas"></ul>
+            </div>
+            
+            <div class="card" id="material">
+                <h2>Material Dental por Clínica</h2>
+                <ul id="lista-material"></ul>
+            </div>
+            
+            <div class="card" id="pacientes-tratamientos">
+                <h2>Pacientes por Tratamientos</h2>
+                <ul id="lista-pacientes-tratamientos"></ul>
+            </div>
+            
+            <div class="card" id="medicamentos-tratamientos">
+                <h2>Medicamentos por Tratamientos y Pacientes</h2>
+                <ul id="lista-medicamentos-tratamientos"></ul>
+            </div>
+            
+            <div class="card" id="proveedores">
+                <h2>Proveedores por Clínica</h2>
+                <ul id="lista-proveedores"></ul>
+            </div>
+            
+            <div class="card" id="ingresos-gastos">
+                <h2>Ingresos y Gastos</h2>
+                <canvas id="grafico-finanzas"></canvas>
+            </div>
+            
+            <div class="card" id="historial-citas">
+                <h2>Historial de Citas por Paciente</h2>
+                <ul id="lista-historial-citas"></ul>
+            </div>
+            
+            <div class="card" id="empleados">
+                <h2>Estado de Empleados</h2>
+                <ul id="lista-empleados"></ul>
+            </div>
+            
+            <div class="card" id="protesis-dentales">
+                <h2>Prótesis Dentales en Uso</h2>
+                <ul id="lista-protesis"></ul>
+            </div>
+            
+            <div class="card alert" id="alertas">
+                <h2>Alertas y Notificaciones</h2>
+                <ul id="lista-alertas"></ul>
+            </div>
+            
+            <div class="card" id="satisfaccion-paciente">
+                <h2>Satisfacción del Paciente</h2>
+                <canvas id="grafico-satisfaccion"></canvas>
+            </div>
+            
+            <div class="card" id="rendimiento-doctores">
+                <h2>Rendimiento de Doctores</h2>
+                <ul id="lista-rendimiento-doctores"></ul>
+            </div>
+            
+            <div class="card" id="tiempo-espera">
+                <h2>Tiempo Promedio de Espera</h2>
+                <canvas id="grafico-espera"></canvas>
+            </div>
+            
+            <div class="card" id="facturacion-clinicas">
+                <h2>Facturación por Clínica</h2>
+                <canvas id="grafico-facturacion"></canvas>
+            </div>
+            
+            <div class="card" id="tendencias-tratamientos">
+                <h2>Tendencias de Tratamientos</h2>
+                <canvas id="grafico-tendencias"></canvas>
+            </div>
+            
+            <div class="card" id="pacientes-nuevos-recurrentes">
+                <h2>Pacientes Nuevos vs Recurrentes</h2>
+                <canvas id="grafico-pacientes"></canvas>
+            </div>
+            
+            <div class="card" id="registro-urgencias">
+                <h2>Registro de Urgencias</h2>
+                <ul id="lista-urgencias"></ul>
+            </div>
+        </section>
+    </div>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .dashboard-container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background: #007bff;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .alert {
+            background: #ffcccc;
+            border-left: 5px solid red;
+        }
+    </style>
+    
+    <script src="script.js"></script>
+</body>
+</html>

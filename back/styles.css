@@ -1,0 +1,109 @@
+/* Reset */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar-header {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 10px 0;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.sidebar-menu li a:hover {
+    background: #1abc9c;
+    border-radius: 5px;
+}
+
+/* Contenido principal */
+.content {
+    margin-left: 260px;
+    padding: 20px;
+    width: calc(100% - 260px);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Tarjetas informativas */
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Gráficos */
+.chart-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Tablas de Doctores y Pacientes */
+.table-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.table-card li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-card li:last-child {
+    border-bottom: none;
+}

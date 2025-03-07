@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ConeDental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar de Navegación -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>ConeDental</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Citas</a></li>
+            <li><a href="#">Clínicas</a></li>
+            <li><a href="#">Doctores</a></li>
+            <li><a href="#">Empleados</a></li>
+            <li><a href="#">Material Dental</a></li>
+            <li><a href="#">Medicamentos</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Tratamientos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="content">
+        <header class="header">
+            <h1>Dashboard ConeDental</h1>
+        </header>
+
+        <!-- Sección de Gráficos -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Citas por Doctores</h5>
+                        <canvas id="chart-citas"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Pacientes por Tratamientos</h5>
+                        <canvas id="chart-tratamientos"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Material Dental por Clínica</h5>
+                        <canvas id="chart-material"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Empleados por Clínica</h5>
+                        <canvas id="chart-empleados"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Medicamentos por Paciente</h5>
+                        <canvas id="chart-pacientes-medicamentos"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Medicamentos por Tratamiento</h5>
+                        <canvas id="chart-tratamientos-medicamentos"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Tratamientos con Prótesis Dentales</h5>
+                        <canvas id="chart-protesis-tratamientos"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card chart-card">
+                        <h5>Proveedores por Clínica</h5>
+                        <canvas id="chart-proveedores"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
