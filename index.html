@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - ConeDental</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard - ConesaDental</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="script.js"></script>
 </head>
+
 <body>
 
-    <!-- Sidebar de Navegación -->
-    <nav class="sidebar">
-        <div class="sidebar-header">
-            <h2>ConeDental</h2>
-        </div>
-    </nav>
+    <header>
+        <h1>Dashboard de ConesaDental 🦷</h1>
+    </header>
 
-    <!-- Contenido Principal -->
-    <div class="content">
-        <header class="header">
-            <h1>Dashboard ConeDental</h1>
-        </header>
-
-        <!-- Sección de Gráficos -->
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card chart-card">
-                        <h5>Número de Nuevos Pacientes</h5>
-                        <canvas id="chart-nuevos-pacientes"></canvas>
-                    </div>
-                </div>
-            </div>
+    <main class="charts-container">
+        <div class="chart">
+            <h2>Nuevos Pacientes</h2>
+            <canvas id="nuevosPacientesChart"></canvas>
         </div>
-    </div>
+
+        <div class="chart">
+            <h2>Tratamientos Realizados</h2>
+            <canvas id="tratamientosChart"></canvas>
+        </div>
+
+        <div class="chart">
+            <h2>Costos Operativos</h2>
+            <canvas id="costosChart"></canvas>
+        </div>
+
+        <div class="chart">
+            <h2>Consultas por Dentista</h2>
+            <canvas id="consultasChart"></canvas>
+        </div>
+
+        <div class="chart">
+            <h2>Nivel de Stock</h2>
+            <canvas id="stockChart"></canvas>
+        </div>
+
+        <div class="chart">
+            <h2>Ingresos por Tratamiento</h2>
+            <canvas id="ingresosChart"></canvas>
+        </div>
+    </main>
 
     <script src="script.js"></script>
+
 </body>
+
 </html>
